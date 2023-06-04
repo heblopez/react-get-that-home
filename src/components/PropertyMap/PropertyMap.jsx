@@ -1,21 +1,21 @@
-import { useEffect, useState } from 'react';
-import { GoogleMap, Marker, useJsApiLoader } from '@react-google-maps/api';
-import { googleMapsKey } from '../../config';
+import { useEffect, useState } from "react";
+import { GoogleMap, Marker, useJsApiLoader } from "@react-google-maps/api";
+import { googleMapsKey } from "../../config";
 
 export function PropertyMap({ address }) {
   const [center, setCenter] = useState(null);
 
   const { isLoaded, loadError } = useJsApiLoader({
-    id: 'google-map-script',
+    id: "google-map-script",
     googleMapsApiKey: googleMapsKey,
-    version: 'weekly',
+    version: "weekly",
   });
 
   useEffect(() => {
     if (isLoaded) {
       const geocoder = new window.google.maps.Geocoder();
       geocoder.geocode({ address }, (results, status) => {
-        if (status === 'OK') {
+        if (status === "OK") {
           setCenter({
             lat: results[0].geometry.location.lat(),
             lng: results[0].geometry.location.lng(),
@@ -34,14 +34,14 @@ export function PropertyMap({ address }) {
   }
 
   return (
-    <div style={{ height: '700px', width: '100%', marginTop: '32px' }}>
+    <div style={{ height: "700px", width: "100%", marginTop: "32px" }}>
       <GoogleMap
         center={center}
         zoom={17}
-        mapContainerStyle={{ height: '100%', width: '100%' }}
+        mapContainerStyle={{ height: "100%", width: "100%" }}
       >
-        <Marker position={center} />
+        {center && <Marker position={center} />}
       </GoogleMap>
     </div>
-  )
+  );
 }

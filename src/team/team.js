@@ -14,11 +14,18 @@ const team = [
     url_linkedin: "https://www.linkedin.com/in/cristoperyarleque/",
   },
   {
-    id: "vicjespca",
-    name: "Victor Espinoza",
-    avatar: "https://avatars.githubusercontent.com/u/117400079?v=4",
-    url_git: "https://github.com/vicjespca",
-    url_linkedin: "https://www.linkedin.com/in/victorespinozac/",
+    id: "nestorlls",
+    name: "Paul Llanque",
+    avatar: "https://avatars.githubusercontent.com/u/7662759?v=4",
+    url_git: "https://github.com/nestorlls",
+    url_linkedin: "https://www.linkedin.com/in/paul-llanque/",
+  },
+  {
+    id: "Maycol-Knight",
+    name: "Maycol Quispe",
+    avatar: "https://avatars.githubusercontent.com/u/117923034?v=4",
+    url_git: "https://github.com/Maycol-Knight",
+    url_linkedin: "https://www.linkedin.com/in/maycolquispe/",
   },
 ];
 
