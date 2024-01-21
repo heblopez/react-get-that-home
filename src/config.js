@@ -1,4 +1,4 @@
-const BASE_URI = "https://get-that-home-api.up.railway.app";
+const BASE_URI = "https://get-that-home-api-zdhe.onrender.com";
 const GITHUB_API = "https://api.github.com/users";
 const TOKEN_KEY = "tokey-session";
 const ID = "user-id";
