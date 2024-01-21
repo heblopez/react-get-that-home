@@ -18,7 +18,7 @@ function UserProvider({ children }) {
   useEffect(() => {
     const user = setTimeout(() => {
       User.getUser(userID)
-        .then((u) => setUser(u))
+        .then((u) => {if (u) setUser(u)})
         .catch(console.log);
     }, 500);
     return () => clearTimeout(user);
