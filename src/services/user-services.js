@@ -17,8 +17,11 @@ const User = {
   async getUser(id) {
     try {
       const response = await apiFetch(`/users/${id}`);
-      const { _token, ...user } = response;
-      return user;
+      if (response) {
+        const { _token, ...user } = response;
+        return user;
+      }
+      return null;
     } catch (error) {
       console.error(error);
     }
